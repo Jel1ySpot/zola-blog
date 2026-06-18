@@ -1,0 +1,39 @@
+/* 打勾路径动画，由 CheckAnim 组件使用（src/components/check_anim.rs）。
+   .bark-done 淡出类保留供需要淡出效果的场合复用。 */
+
+@keyframes bark-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes bark-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+.bark-check__circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3;
+  stroke-dasharray: 151; /* 2 * π * r(24) ≈ 150.8 */
+  stroke-dashoffset: 151;
+  animation: bark-draw 0.5s ease forwards;
+}
+
+.bark-check__mark {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 40;
+  stroke-dashoffset: 40;
+  animation: bark-draw 0.35s 0.45s ease forwards;
+}
+
+/* 对勾画完后整体淡出（可选，添加至 CheckAnim 的外层 div 即可启用）。 */
+.bark-done {
+  animation: bark-fade-out 0.5s 1.15s ease forwards;
+}

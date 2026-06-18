@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-Hans" class="dark">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Bark - Zola Console</title>
+        <base href="./" />
+        <link rel="stylesheet" href="./admin-8a964a34e8b10d3d.css" integrity="sha384-t0ryMxJ9/UCLlw3LUARvvLr0t7BBOhtW5J5aSUrRg3D1vQy7FSYfXJYiGfi86R6t"/>
+        
+<script type="module">
+import init, * as bindings from './bark-6153cc51f1ee6560.js';
+const wasm = await init({ module_or_path: './bark-6153cc51f1ee6560_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+        <link rel="stylesheet" href="./tailwind-5ff2b7ada648dd1b.css" integrity="sha384-MNvWqRgxzvzTmBJJOpl+gVS3VI4cbN23jPUQDIbu9zE8i0IDhPBKxWwZW2jSlDYl"/>
+    <link rel="modulepreload" href="./bark-6153cc51f1ee6560.js" crossorigin="anonymous" integrity="sha384-JBnRP29/4fiioUdhiJzvhlfKjBq+oKLBfeZ0OpsFu4quzQCIAj7P3xkcfVlzJ9+r"><link rel="preload" href="./bark-6153cc51f1ee6560_bg.wasm" crossorigin="anonymous" integrity="sha384-aDyajrnKgIHaksy/yaZgfqcOWqVw7fBaCFLusaK1SytilrbBm3Y//DVfFqEMde+l" as="fetch" type="application/wasm"></head>
+    <body class="bg-white text-black dark:bg-black dark:text-white"></body>
+</html>
