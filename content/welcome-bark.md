@@ -2,6 +2,8 @@
 title = "开始使用 Bark"
 description = "一个 Zola 控制台"
 date = 2026-06-18T19:45:00Z
+updated = 2026-06-21T07:43:00Z
+draft = true
 slug = "welcome-bark"
 authors = ["Bark"]
 +++
